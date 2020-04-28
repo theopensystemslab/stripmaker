@@ -1,5 +1,5 @@
 const MODULES = {
-  "A1": {
+  A1: {
     geometry: [
       [0, 0],
       [0, 3],
@@ -7,15 +7,8 @@ const MODULES = {
       [5.7, 3],
       [5.7, 0]
     ],
-    permittedNeighbours: [
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-    ]
+    permittedNeighbours: [[], [], [], [], [], []]
   }
-}
+};
 
 export default MODULES;

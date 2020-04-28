@@ -1,3 +1,3 @@
-import { LineBasicMaterial } from "three"
+import { LineBasicMaterial } from "three";
 
-export default new LineBasicMaterial({ color: '#000000' })
+export default new LineBasicMaterial({ color: "#000000" });

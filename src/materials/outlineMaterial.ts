@@ -5,7 +5,7 @@ import * as THREE from "three";
 
 const outlineShader = {
   uniforms: THREE.UniformsUtils.clone({
-    fillColor: { type: 'vec3', value: new THREE.Color(0x74ebd5) },
+    fillColor: { type: "vec3", value: new THREE.Color(0x74ebd5) },
     linewidth: {
       // type: "f",
       value: 0.01

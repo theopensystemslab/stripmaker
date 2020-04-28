@@ -1,5 +1,5 @@
 import produce from "immer";
-import create from 'zustand';
+import create from "zustand";
 
 export const [useStore, api] = create(set => ({
   nested: { structure: { contains: { a: "value" } } },
