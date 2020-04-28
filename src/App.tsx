@@ -1,11 +1,14 @@
 import { OrbitControls } from 'drei'
-import React, { Suspense, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Canvas } from 'react-three-fiber'
 import * as THREE from "three"
 import "./app.css"
-import outlineMaterial from './materials/outlineMaterial'
+import { useStore } from './lib/store'
+import lineMaterial from './materials/lineMaterial'
+import placeholderMaterial from './materials/placeholderMaterial'
+import plywoodMaterial from './materials/plywoodMaterial'
 
-function Box(props) {
+function Module({ position, temp }) {
   // This reference will give us direct access to the mesh
   const mesh = useRef(null)
 
@@ -35,21 +38,53 @@ function Box(props) {
     depth: 1.2
   });
 
+  const edges = new THREE.EdgesGeometry(geometry);
+
   return (
-    <mesh
-      {...props}
-      ref={mesh}
-      material={outlineMaterial}
-      scale={active ? [1.5, 1.5, 1.5] : [1, 1, 1]}
-      // onClick={e => setActive(!active)}
-      // onPointerOver={e => setHover(true)}
-      // onPointerOut={e => setHover(false)}
-      geometry={geometry}
+    <group
+      position={position}
+    // onClick={e => {
+    //   e.stopPropagation()
+    //   // setActive(!active)
+    // }}
+
+    // scale={hovered ? [1.05, 1.05, 1.05] : [1, 1, 1]}
+
     >
-      {/* <boxBufferGeometry attach="geometry" args={[1, 1, 1]} /> */}
-      {/* <meshStandardMaterial attach= color={hovered ? 'hotpink' : 'orange'} /> */}
-    </mesh>
+      <group
+        position={hovered ? new THREE.Vector3(0, 0.3, 0) : new THREE.Vector3(0, 0, 0)}
+      // onPointerOver={e => {
+      //   e.stopPropagation();
+      //   setHover(true)
+      //   geometry.computeBoundingBox()
+      // }}
+      // onPointerOut={e => {
+      //   e.stopPropagation();
+      //   setHover(false)
+      //   geometry.computeBoundingBox()
+      // }}
+      >
+        <mesh
+          ref={mesh}
+          material={temp ? placeholderMaterial : plywoodMaterial}
+          geometry={geometry}
+        >
+          {/* <meshBasicMaterial color="white" attach="material" /> */}
+          {/* <boxBufferGeometry attach="geometry" args={[1, 1, 1]} /> */}
+          {/* <meshStandardMaterial attach= color={hovered ? 'hotpink' : 'orange'} /> */}
+        </mesh>
+
+        <lineSegments material={lineMaterial} geometry={edges} />
+      </group>
+    </group>
   )
+}
+
+const extract = (key: string): number[] => key.split(",").map(x => Number(x) * 1.2)
+
+const Stuff = () => {
+  const grid = useStore(store => store.grid)
+  return <>{Object.entries(grid).map(([k, v]) => <Module key={k} temp={v === "temp"} position={extract(k)} />)}</>
 }
 
 function App() {
@@ -57,10 +92,7 @@ function App() {
     <Canvas camera={{ fov: 45, position: [-10, 10, -10] }} >
       <ambientLight intensity={0.8} />
       <pointLight position={[10, 10, 10]} intensity={0.4} />
-      <Suspense fallback={null}>
-        <Box position={[0, 0, 0]} />
-        {/* <Box position={[0, 0, -1.2]} /> */}
-      </Suspense>
+      <Stuff />
       <OrbitControls target={[0, 0.5, 0]} />
     </ Canvas>
   );
