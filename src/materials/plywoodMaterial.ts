@@ -37,7 +37,10 @@ const plywoodMaterial = new THREE.MeshStandardMaterial({
   // https://discourse.threejs.org/t/material-displacement-map-makes-the-texture-unwrap-the-models-surfaces/5119/11
   displacementScale: 0,
   roughness: 0.8,
-  metalness: 0
+  metalness: 0,
+  side: THREE.DoubleSide,
+  polygonOffset: true,
+  polygonOffsetFactor: 1
 });
 
 export default plywoodMaterial;

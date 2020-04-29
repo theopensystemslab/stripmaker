@@ -1,59 +1,44 @@
-import React, { useRef, useState } from "react";
-import * as THREE from "three";
+import React, { useMemo, useState } from "react";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 
-import lineMaterial from "../materials/lineMaterial";
-import placeholderMaterial from "../materials/placeholderMaterial";
-import plywoodMaterial from "../materials/plywoodMaterial";
+const types = ["A2", "B2", "C2", "D1", "E1", "A1", "B1", "C1"];
 
-function Module({ position, temp }) {
-  // This reference will give us direct access to the mesh
-  const mesh = useRef(null);
+const variations = ["04", "03", "02", "01", "05", "06", "07"];
 
-  // Set up state for the hovered and active state
-  const [hovered, setHover] = useState(false);
-  const [active, setActive] = useState(false);
+const Module = ({ type, variation }) => {
+  const [obj, set] = useState();
+  const url = "/models/Toolbox_Stripmaker_WHAlm_v1.5_kaal-SU18.obj";
+  useMemo(() => {
+    console.log("loading model");
+    new OBJLoader().load(url, set);
+  }, [url]);
 
-  // Rotate mesh every frame, this is outside of React without overhead
-  // useFrame(() => mesh.current.rotation.x = mesh.current.rotation.y += 0.01)
-
-  const points = [
-    [0, 0],
-    [0, 3],
-    [2.85, 4.85],
-    [5.7, 3],
-    [5.7, 0]
-  ];
-
-  const [start, ...rest] = points.map(([x, y]) => [x - 2.85, y]);
-
-  const shape = new THREE.Shape();
-  shape.moveTo(...(start as [number, number]));
-  rest.forEach((path: [number, number]) => shape.lineTo(...path));
-
-  const geometry = new THREE.ExtrudeGeometry(shape, {
-    bevelEnabled: false,
-    depth: 1.2
-  });
-
-  const edges = new THREE.EdgesGeometry(geometry);
-
-  return (
-    <group position={position}>
+  if (obj) {
+    const children = obj.children.filter(c =>
+      c.name.includes(`Module_${type}_${variation}`)
+    );
+    return (
       <group
-        position={
-          hovered ? new THREE.Vector3(0, 0.3, 0) : new THREE.Vector3(0, 0, 0)
-        }
+        onClick={e => {
+          e.stopPropagation();
+          console.log(e.object);
+        }}
       >
-        <mesh
-          ref={mesh}
-          material={temp ? placeholderMaterial : plywoodMaterial}
-          geometry={geometry}
-        />
-
-        <lineSegments material={lineMaterial} geometry={edges} />
+        <group
+          position={[
+            types.findIndex(t => t === type) * -10 - 3,
+            0,
+            variations.findIndex(v => v === variation) * 10.8 + 0.6
+          ]}
+        >
+          {children.map(child => (
+            <primitive key={child.name} object={child} />
+          ))}
+        </group>
       </group>
-    </group>
-  );
-}
+    );
+  }
+  return null;
+};
 
 export default Module;
