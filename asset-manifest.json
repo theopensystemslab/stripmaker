@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "https://theopensystemslab.github.io/stripmaker/static/css/main.36b64bc4.chunk.css",
-    "main.js": "https://theopensystemslab.github.io/stripmaker/static/js/main.828a5560.chunk.js",
-    "main.js.map": "https://theopensystemslab.github.io/stripmaker/static/js/main.828a5560.chunk.js.map",
+    "main.js": "https://theopensystemslab.github.io/stripmaker/static/js/main.6db96987.chunk.js",
+    "main.js.map": "https://theopensystemslab.github.io/stripmaker/static/js/main.6db96987.chunk.js.map",
     "runtime-main.js": "https://theopensystemslab.github.io/stripmaker/static/js/runtime-main.28a77a0a.js",
     "runtime-main.js.map": "https://theopensystemslab.github.io/stripmaker/static/js/runtime-main.28a77a0a.js.map",
     "static/js/2.08f2c58e.chunk.js": "https://theopensystemslab.github.io/stripmaker/static/js/2.08f2c58e.chunk.js",
     "static/js/2.08f2c58e.chunk.js.map": "https://theopensystemslab.github.io/stripmaker/static/js/2.08f2c58e.chunk.js.map",
     "index.html": "https://theopensystemslab.github.io/stripmaker/index.html",
-    "precache-manifest.5cb3e386ba8731374cf5d92756af6bd8.js": "https://theopensystemslab.github.io/stripmaker/precache-manifest.5cb3e386ba8731374cf5d92756af6bd8.js",
+    "precache-manifest.075f34dc4d4bfa3332cc8f462db1bbcb.js": "https://theopensystemslab.github.io/stripmaker/precache-manifest.075f34dc4d4bfa3332cc8f462db1bbcb.js",
     "service-worker.js": "https://theopensystemslab.github.io/stripmaker/service-worker.js",
     "static/css/main.36b64bc4.chunk.css.map": "https://theopensystemslab.github.io/stripmaker/static/css/main.36b64bc4.chunk.css.map",
     "static/js/2.08f2c58e.chunk.js.LICENSE.txt": "https://theopensystemslab.github.io/stripmaker/static/js/2.08f2c58e.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.28a77a0a.js",
     "static/js/2.08f2c58e.chunk.js",
     "static/css/main.36b64bc4.chunk.css",
-    "static/js/main.828a5560.chunk.js"
+    "static/js/main.6db96987.chunk.js"
   ]
 }
