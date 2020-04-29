@@ -1,5 +1,5 @@
 {
-  "name": "buildx2020",
+  "name": "stripmaker",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,8 @@
     "type-check": "tsc --noEmit",
     "type-check:watch": "tsc --noEmit --watch",
     "lint": "tslint --project .",
-    "lint:fix": "tslint --fix --project ."
+    "lint:fix": "tslint --fix --project .",
+    "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -53,6 +54,7 @@
   "dependencies": {
     "drei": "^0.0.15",
     "immer": "^6.0.3",
+    "lodash": "^4.17.15",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
@@ -70,6 +72,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
+    "gh-pages": "^2.2.0",
     "husky": "^4.0.10",
     "import-sort-style-module": "^6.0.0",
     "lint-staged": "^10.0.0",
