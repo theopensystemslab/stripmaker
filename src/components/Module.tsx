@@ -46,7 +46,7 @@ const Module = ({ pos, type, variation }) => {
               material={
                 child.material.name === "Wood_3_Ver" ? plywoodMaterial : fill
               }
-              receiveShadow
+              receiveShadow={child.material.name !== "Wood_3_Ver"}
               castShadow={child.material.name !== "Wood_3_Ver"}
             />
           ))}

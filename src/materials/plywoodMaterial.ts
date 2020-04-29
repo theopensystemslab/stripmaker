@@ -12,10 +12,12 @@ export const fill = new THREE.MeshLambertMaterial({
 
 const tl = new THREE.TextureLoader();
 
-const rpt = function(texture) {
+const rpt = function(texture: THREE.Texture) {
   texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
-  texture.offset.set(0, 0);
-  texture.repeat.set(2, 2);
+  texture.repeat.set(0.025, 0.025);
+  // texture.offset.set(0, 0);
+  // texture.repeat.set(2, 2);
+  // texture.
   // texture.mapping = THREE.CubeUVReflectionMapping;
 };
 
