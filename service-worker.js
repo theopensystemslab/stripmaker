@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://theopensystemslab.github.io/stripmaker/precache-manifest.1e11ef94d198e4bf70d7c9c79f1a4bea.js"
+  "https://theopensystemslab.github.io/stripmaker/precache-manifest.43fcc96cff472e2cabea4d7fd71202f6.js"
 );
 
 self.addEventListener('message', (event) => {
