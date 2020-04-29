@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "PUBLIC_URL=https://theopensystemslab.github.io/stripmaker react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "cosmos": "cosmos",
@@ -13,7 +13,7 @@
     "type-check:watch": "tsc --noEmit --watch",
     "lint": "tslint --project .",
     "lint:fix": "tslint --fix --project .",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

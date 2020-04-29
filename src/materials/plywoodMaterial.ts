@@ -6,24 +6,25 @@ const rpt = function(texture) {
   texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
   texture.offset.set(0, 0);
   texture.repeat.set(2, 2);
+  // texture.mapping = THREE.CubeUVReflectionMapping;
 };
 
 const plywoodMaterial = new THREE.MeshStandardMaterial({
   color: 0xeeeeee,
   map: tl.load(
-    "/46_plywood texture-seamless_hr/46_plywood texture-seamless_hr_DIFFUSE.jpg",
+    "46_plywood texture-seamless_hr/46_plywood texture-seamless_hr_DIFFUSE.jpg",
     rpt
   ),
   displacementMap: tl.load(
-    "/46_plywood texture-seamless_hr/46_plywood texture-seamless_hr_DISPL.jpg",
+    "46_plywood texture-seamless_hr/46_plywood texture-seamless_hr_DISPL.jpg",
     rpt
   ),
   normalMap: tl.load(
-    "/46_plywood texture-seamless_hr/46_plywood texture-seamless_hr_NORM.jpg",
+    "46_plywood texture-seamless_hr/46_plywood texture-seamless_hr_NORM.jpg",
     rpt
   ),
   aoMap: tl.load(
-    "/46_plywood texture-seamless_hr/46_plywood texture-seamless_hr-AO.jpg",
+    "46_plywood texture-seamless_hr/46_plywood texture-seamless_hr-AO.jpg",
     rpt
   ),
   // side: THREE.DoubleSide

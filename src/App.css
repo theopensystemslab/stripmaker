@@ -9,6 +9,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  background: #eee;
   background-color: #272730;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
