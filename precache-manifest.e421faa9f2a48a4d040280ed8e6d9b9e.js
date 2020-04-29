@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fca7e4256de706b03d462c2fe383c599",
+    "revision": "702e8a8af3665847e618aa85cbe8e085",
     "url": "https://theopensystemslab.github.io/stripmaker/index.html"
   },
   {
-    "revision": "386c2697d5ae378dbc73",
+    "revision": "49f1082af8b665ebcee6",
     "url": "https://theopensystemslab.github.io/stripmaker/static/css/main.f3607bd8.chunk.css"
   },
   {
-    "revision": "e0e2526707ba09e017aa",
-    "url": "https://theopensystemslab.github.io/stripmaker/static/js/2.8d9bf0cb.chunk.js"
+    "revision": "bc8d0c2329f37a37171f",
+    "url": "https://theopensystemslab.github.io/stripmaker/static/js/2.39cb65c0.chunk.js"
   },
   {
     "revision": "02ad6a6060afe2d900f5ee884b94b550",
-    "url": "https://theopensystemslab.github.io/stripmaker/static/js/2.8d9bf0cb.chunk.js.LICENSE.txt"
+    "url": "https://theopensystemslab.github.io/stripmaker/static/js/2.39cb65c0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "386c2697d5ae378dbc73",
-    "url": "https://theopensystemslab.github.io/stripmaker/static/js/main.6ef518c2.chunk.js"
+    "revision": "49f1082af8b665ebcee6",
+    "url": "https://theopensystemslab.github.io/stripmaker/static/js/main.94595f64.chunk.js"
   },
   {
     "revision": "b8fe926efd11b7284b8d",
