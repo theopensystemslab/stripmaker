@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "https://theopensystemslab.github.io/stripmaker/static/css/main.36b64bc4.chunk.css",
-    "main.js": "https://theopensystemslab.github.io/stripmaker/static/js/main.6db96987.chunk.js",
-    "main.js.map": "https://theopensystemslab.github.io/stripmaker/static/js/main.6db96987.chunk.js.map",
+    "main.css": "https://theopensystemslab.github.io/stripmaker/static/css/main.f3607bd8.chunk.css",
+    "main.js": "https://theopensystemslab.github.io/stripmaker/static/js/main.6ef518c2.chunk.js",
+    "main.js.map": "https://theopensystemslab.github.io/stripmaker/static/js/main.6ef518c2.chunk.js.map",
     "runtime-main.js": "https://theopensystemslab.github.io/stripmaker/static/js/runtime-main.28a77a0a.js",
     "runtime-main.js.map": "https://theopensystemslab.github.io/stripmaker/static/js/runtime-main.28a77a0a.js.map",
-    "static/js/2.08f2c58e.chunk.js": "https://theopensystemslab.github.io/stripmaker/static/js/2.08f2c58e.chunk.js",
-    "static/js/2.08f2c58e.chunk.js.map": "https://theopensystemslab.github.io/stripmaker/static/js/2.08f2c58e.chunk.js.map",
+    "static/js/2.8d9bf0cb.chunk.js": "https://theopensystemslab.github.io/stripmaker/static/js/2.8d9bf0cb.chunk.js",
+    "static/js/2.8d9bf0cb.chunk.js.map": "https://theopensystemslab.github.io/stripmaker/static/js/2.8d9bf0cb.chunk.js.map",
     "index.html": "https://theopensystemslab.github.io/stripmaker/index.html",
-    "precache-manifest.075f34dc4d4bfa3332cc8f462db1bbcb.js": "https://theopensystemslab.github.io/stripmaker/precache-manifest.075f34dc4d4bfa3332cc8f462db1bbcb.js",
+    "precache-manifest.9ae459928c2d1208ab60f50c765110b1.js": "https://theopensystemslab.github.io/stripmaker/precache-manifest.9ae459928c2d1208ab60f50c765110b1.js",
     "service-worker.js": "https://theopensystemslab.github.io/stripmaker/service-worker.js",
-    "static/css/main.36b64bc4.chunk.css.map": "https://theopensystemslab.github.io/stripmaker/static/css/main.36b64bc4.chunk.css.map",
-    "static/js/2.08f2c58e.chunk.js.LICENSE.txt": "https://theopensystemslab.github.io/stripmaker/static/js/2.08f2c58e.chunk.js.LICENSE.txt"
+    "static/css/main.f3607bd8.chunk.css.map": "https://theopensystemslab.github.io/stripmaker/static/css/main.f3607bd8.chunk.css.map",
+    "static/js/2.8d9bf0cb.chunk.js.LICENSE.txt": "https://theopensystemslab.github.io/stripmaker/static/js/2.8d9bf0cb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.28a77a0a.js",
-    "static/js/2.08f2c58e.chunk.js",
-    "static/css/main.36b64bc4.chunk.css",
-    "static/js/main.6db96987.chunk.js"
+    "static/js/2.8d9bf0cb.chunk.js",
+    "static/css/main.f3607bd8.chunk.css",
+    "static/js/main.6ef518c2.chunk.js"
   ]
 }
