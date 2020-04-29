@@ -39,7 +39,7 @@ body {
   padding: 40px 10px;
   z-index: 2;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 1s;
 }
 #clipping-slider:hover {
   opacity: 1;

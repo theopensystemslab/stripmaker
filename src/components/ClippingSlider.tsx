@@ -1,5 +1,6 @@
 import Slider from "@material-ui/core/Slider";
 import { makeStyles } from "@material-ui/core/styles";
+import anime from "animejs/lib/anime.es.js";
 import React, { useState } from "react";
 import * as THREE from "three";
 
@@ -40,8 +41,17 @@ const ClippingSlider = () => {
         min={1}
         step={1}
         onChange={(e, v: number) => {
-          setVal(v);
-          clipPlanes[0].constant = v;
+          if (v !== val) {
+            const duration = Math.abs(val - v) * 300;
+            anime({
+              duration,
+              constant: v,
+              targets: clipPlanes[0],
+              easing: "easeOutElastic(1,0.9)"
+            });
+
+            setVal(v);
+          }
         }}
       />
     </div>

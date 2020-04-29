@@ -53,12 +53,14 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.9.12",
+    "animejs": "^3.2.0",
     "drei": "^0.0.15",
     "immer": "^6.0.3",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "react-spring": "^8.0.27",
     "react-three-fiber": "^4.1.1",
     "three": "^0.115.0",
     "zustand": "^2.2.3"

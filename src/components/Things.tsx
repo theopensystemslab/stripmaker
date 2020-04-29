@@ -6,6 +6,7 @@ import OldModule from "../components/OldModule";
 import createPlaneStencilGroup from "../lib/createPlaneStencilGroup";
 import extractGridPosition from "../lib/extractGridPosition";
 import { useStore } from "../lib/store";
+import stencilMaterial from "../materials/stencilMaterial";
 
 export const Stuff = () => {
   const grid = useStore(store => store.grid);
@@ -33,23 +34,12 @@ const Things = () => {
 
   const stencilGroup = createPlaneStencilGroup(geometry, planes[0], 1);
 
-  const planeMat = new THREE.MeshStandardMaterial({
-    clippingPlanes: [],
-    color: 0x000000,
-    metalness: 0,
-    roughness: 1,
-    stencilFail: THREE.ReplaceStencilOp,
-    stencilFunc: THREE.NotEqualStencilFunc,
-    stencilRef: 0,
-    stencilWrite: true,
-    stencilZFail: THREE.ReplaceStencilOp,
-    stencilZPass: THREE.ReplaceStencilOp
-  });
+  const po = new THREE.Mesh(planeGeom, stencilMaterial);
 
-  const po = new THREE.Mesh(planeGeom, planeMat);
   po.onAfterRender = function(renderer) {
     renderer.clearStencil();
   };
+
   po.renderOrder = 1.1;
 
   object.add(stencilGroup);
