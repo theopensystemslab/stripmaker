@@ -1,5 +1,15 @@
 import * as THREE from "three";
 
+import { clipPlanes } from "../components/ClippingSlider";
+
+export const fill = new THREE.MeshLambertMaterial({
+  color: "white",
+  // flatShading: true,
+  clippingPlanes: clipPlanes,
+  clipIntersection: true,
+  clipShadows: true
+});
+
 const tl = new THREE.TextureLoader();
 
 const rpt = function(texture) {
@@ -41,7 +51,12 @@ const plywoodMaterial = new THREE.MeshStandardMaterial({
   metalness: 0,
   side: THREE.DoubleSide,
   polygonOffset: true,
-  polygonOffsetFactor: 1
+  polygonOffsetFactor: 1,
+
+  // flatShading: true,
+  clippingPlanes: clipPlanes,
+  clipIntersection: true
+  // clipShadows: true
 });
 
 export default plywoodMaterial;

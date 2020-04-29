@@ -1,17 +1,11 @@
 import React, { useMemo, useState } from "react";
-import * as THREE from "three";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 
-import plywoodMaterial from "../materials/plywoodMaterial";
+import plywoodMaterial, { fill } from "../materials/plywoodMaterial";
 
 const types = ["A2", "B2", "C2", "D1", "E1", "A1", "B1", "C1"];
 
 const variations = ["04", "03", "02", "01", "05", "06", "07"];
-
-const fill = new THREE.MeshLambertMaterial({
-  color: "white",
-  flatShading: true
-});
 
 const Module = ({ pos, type, variation }) => {
   const [obj, set] = useState();
@@ -53,7 +47,7 @@ const Module = ({ pos, type, variation }) => {
                 child.material.name === "Wood_3_Ver" ? plywoodMaterial : fill
               }
               receiveShadow
-              castShadow
+              castShadow={child.material.name !== "Wood_3_Ver"}
             />
           ))}
         </group>

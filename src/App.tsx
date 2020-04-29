@@ -2,12 +2,16 @@ import "./app.css";
 
 import { OrbitControls } from "drei";
 import React from "react";
-import { Canvas } from "react-three-fiber";
+import { Canvas, useThree } from "react-three-fiber";
 import * as THREE from "three";
 
+import ClippingSlider from "./components/ClippingSlider";
 import Module from "./components/Module";
 
 const Building = () => {
+  const { gl } = useThree();
+  gl.localClippingEnabled = true;
+
   const grid = {
     "0,-4": {
       type: "D1",
@@ -50,44 +54,47 @@ const Building = () => {
 
 function App() {
   return (
-    <Canvas
-      camera={{ fov: 45, position: [-2, 10, 10] }}
-      shadowMap={{ enabled: true, type: THREE.PCFSoftShadowMap }}
-      gl={{ antialias: true }}
-      pixelRatio={window.devicePixelRatio}
-    >
-      <ambientLight intensity={0.85} />
-      <pointLight
-        position={[40, 90, 45]}
-        castShadow
-        intensity={0.1}
-        shadowMapWidth={2048}
-        shadowMapHeight={2048}
-        shadowBias={-0.0004}
-      />
-      <Building />
-      {/* <Ground /> */}
-      <mesh name="ground" rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
-        <planeBufferGeometry attach="geometry" args={[30, 30, 1, 1]} />
-        <shadowMaterial
-          attach="material"
-          color={0}
-          opacity={0.2}
-          side={THREE.DoubleSide}
+    <>
+      <ClippingSlider />
+      <Canvas
+        camera={{ fov: 45, position: [8, 12, 14] }}
+        shadowMap={{ enabled: true, type: THREE.PCFSoftShadowMap }}
+        gl={{ antialias: true }}
+        pixelRatio={window.devicePixelRatio}
+      >
+        <ambientLight intensity={0.85} />
+        <pointLight
+          position={[40, 90, 45]}
+          castShadow
+          intensity={0.1}
+          shadowMapWidth={1024}
+          shadowMapHeight={1024}
+          shadowBias={-0.0004}
         />
-        {/* <meshBasicMaterial color="red" side={THREE.DoubleSide} attach="material" /> */}
-      </mesh>
-      <OrbitControls
-        target={[0, 2, 0]}
-        // enableDamping
-        // dampingFactor={0.2}
-        rotateSpeed={0.7}
-        maxPolarAngle={1.49}
-        enabled
-        minDistance={5}
-        maxDistance={30}
-      />
-    </Canvas>
+        <Building />
+        {/* <Ground /> */}
+        <mesh name="ground" rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
+          <planeBufferGeometry attach="geometry" args={[30, 30, 1, 1]} />
+          <shadowMaterial
+            attach="material"
+            color={0}
+            opacity={0.2}
+            side={THREE.DoubleSide}
+          />
+          {/* <meshBasicMaterial color="red" side={THREE.DoubleSide} attach="material" /> */}
+        </mesh>
+        <OrbitControls
+          target={[0, 3, 0]}
+          // enableDamping
+          // dampingFactor={0.2}
+          rotateSpeed={0.7}
+          maxPolarAngle={1.49}
+          enabled
+          minDistance={5}
+          maxDistance={30}
+        />
+      </Canvas>
+    </>
   );
 }
 
