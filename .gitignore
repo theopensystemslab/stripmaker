@@ -22,4 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-46_plywood texture-seamless_hr
+public/materials
+/assets
