@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 
 import plywoodMaterial, { fill } from "../materials/plywoodMaterial";
+import zincMaterial from "../materials/zincMaterial";
 
 const types = ["A2", "B2", "C2", "D1", "E1", "A1", "B1", "C1"];
 
@@ -23,6 +24,7 @@ const Module = ({ pos, type, variation }) => {
     const children = obj.children.filter(
       c => c.name.includes(`Module_${type}_${variation}`) && c.type === "Mesh"
     );
+
     return (
       <group
         position={[x * 1.2, 0, z * 1.2]}
@@ -38,18 +40,45 @@ const Module = ({ pos, type, variation }) => {
             variations.findIndex(v => v === variation) * 10.8 + 0.6
           ]}
         >
-          {children.map(child => (
-            // <primitive key={child.name} object={child} />
-            <mesh
-              key={child.name}
-              geometry={child.geometry}
-              material={
-                child.material.name === "Wood_3_Ver" ? plywoodMaterial : fill
-              }
-              receiveShadow={child.material.name !== "Wood_3_Ver"}
-              castShadow={child.material.name !== "Wood_3_Ver"}
-            />
-          ))}
+          {children.map((child, i) => {
+            const isWood = child.material.name.includes("Wood");
+            const isMetal = !isWood && (type !== "C2" ? i < 2 : i > 2);
+
+            // const plane = clipPlanes[0]
+            // const stencilGroup = createPlaneStencilGroup(child.geometry, plane, i + 1);
+            // const po = new THREE.Mesh(new THREE.PlaneBufferGeometry(20, 20), stencilMaterial)
+
+            // po.onAfterRender = function (renderer) {
+            //   renderer.clearStencil();
+            // }
+            // po.renderOrder = i + 1.1
+
+            // plane.coplanarPoint(po.position);
+
+            // po.lookAt(
+            //   po.position.x - plane.normal.x,
+            //   po.position.y - plane.normal.y,
+            //   po.position.z - plane.normal.z
+            // );
+
+            return (
+              <React.Fragment key={child.name}>
+                {/* <primitive object={stencilGroup} /> */}
+
+                <mesh
+                  geometry={child.geometry}
+                  material={
+                    isWood ? plywoodMaterial : isMetal ? zincMaterial : fill
+                  }
+                  receiveShadow={!isWood}
+                  castShadow={!isWood}
+                  // renderOrder={3}
+                />
+
+                {/* <primitive object={po} /> */}
+              </React.Fragment>
+            );
+          })}
         </group>
       </group>
     );

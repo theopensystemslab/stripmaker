@@ -1,14 +1,9 @@
 import Slider from "@material-ui/core/Slider";
-import { makeStyles } from "@material-ui/core/styles";
 import anime from "animejs/lib/anime.es.js";
 import React, { useState } from "react";
 import * as THREE from "three";
 
-const useStyles = makeStyles({
-  root: {
-    height: 300
-  }
-});
+const DEFAULT = 8;
 
 const marks = [
   {
@@ -25,10 +20,12 @@ const marks = [
   }
 ];
 
-export const clipPlanes = [new THREE.Plane(new THREE.Vector3(0, -1, 0), 8)];
+export const clipPlanes = [
+  new THREE.Plane(new THREE.Vector3(0, -1, 0), DEFAULT)
+];
 
 const ClippingSlider = () => {
-  const [val, setVal] = useState(8);
+  const [val, setVal] = useState(DEFAULT);
 
   return (
     <div id="clipping-slider">

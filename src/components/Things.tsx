@@ -40,7 +40,7 @@ const Things = () => {
     renderer.clearStencil();
   };
 
-  po.renderOrder = 1.1;
+  po.renderOrder = 3;
 
   object.add(stencilGroup);
   poGroup.add(po);
@@ -50,8 +50,8 @@ const Things = () => {
     metalness: 0.1,
     roughness: 0.75,
     clippingPlanes: planes,
-    clipShadows: true,
-    shadowSide: THREE.DoubleSide
+    clipShadows: true
+    // shadowSide: THREE.DoubleSide
   });
 
   const clippedColorFront = new THREE.Mesh(geometry, material);

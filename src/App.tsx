@@ -13,13 +13,17 @@ const Building = () => {
   gl.localClippingEnabled = true;
 
   const grid = {
+    "0,-5": {
+      type: "E1",
+      variation: "01"
+    },
     "0,-4": {
-      type: "D1",
-      variation: "03"
+      type: "E1",
+      variation: "01"
     },
     "0,-3": {
       type: "C2",
-      variation: "03"
+      variation: "02"
     },
     "0,-2": {
       type: "C2",
@@ -27,20 +31,20 @@ const Building = () => {
     },
     "0,-1": {
       type: "C2",
-      variation: "01"
+      variation: "03"
     },
     "0,0": {
-      type: "C2",
+      type: "A1",
       variation: "01"
-    },
-    "0,1": {
-      type: "C2",
-      variation: "02"
-    },
-    "0,2": {
-      type: "D1",
-      variation: "02"
     }
+    // "0,1": {
+    //   type: "C2",
+    //   variation: "02"
+    // },
+    // "0,2": {
+    //   type: "E1",
+    //   variation: "02"
+    // }
   };
 
   return (
@@ -93,6 +97,9 @@ function App() {
           minDistance={5}
           maxDistance={30}
         />
+
+        {/* <Grid /> */}
+        {/* <Things /> */}
       </Canvas>
     </div>
   );
