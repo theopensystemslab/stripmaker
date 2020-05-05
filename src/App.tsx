@@ -54,7 +54,7 @@ const Building = () => {
 
 function App() {
   return (
-    <>
+    <div id="three">
       <ClippingSlider />
       <Canvas
         camera={{ fov: 45, position: [8, 12, 14] }}
@@ -94,7 +94,7 @@ function App() {
           maxDistance={30}
         />
       </Canvas>
-    </>
+    </div>
   );
 }
 

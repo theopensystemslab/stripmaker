@@ -20,6 +20,21 @@ body,
   overflow: hidden;
 }
 
+#root {
+  display: flex;
+  flex-direction: row;
+}
+
+#three {
+  flex: 1;
+}
+
+#two {
+  width: 400px;
+  background: white;
+  padding: 20px;
+}
+
 body {
   position: fixed;
   overflow: hidden;
@@ -41,6 +56,7 @@ body {
   opacity: 0;
   transition: opacity 1s;
 }
+
 #clipping-slider:hover {
   opacity: 1;
 }
