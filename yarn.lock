@@ -1513,9 +1513,9 @@
     loader-utils "^1.2.3"
 
 "@testing-library/dom@>=5":
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-7.3.0.tgz#f26edc23023414d25ed5b187d2db240f627f65de"
-  integrity sha512-F/gFzOGsX1ulldWMREiDkoBg4/kfKXhXi04iW9irwwwF/BLW9dSMLyK0zqnBjCTx76A8B584EuYBhNgWNOnUfA==
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-7.4.0.tgz#0c2ac09f209c1141324eb5117ff1e9e04978bbce"
+  integrity sha512-47Zy7msjFXpQAHuqNNEeBm1wHn5vJGQKzMN9RA5O3KkPYGXMgBtCg16z7ihhFg5AarJIZxGX17CjTzNzDsfKUw==
   dependencies:
     "@babel/runtime" "^7.9.6"
     "@types/testing-library__dom" "^7.0.2"
@@ -3027,9 +3027,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001035, caniuse-lite@^1.0.30001039, caniuse-lite@^1.0.30001043:
-  version "1.0.30001052"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001052.tgz#33a5ddd13783cfe2c8a6a846ab983387d4edff75"
-  integrity sha512-b2/oWZwkpWzEB1+Azr2Z4FcpdDkH+9R4dn+bkwk/6eH9mRSrnZjhA6v32+zsV+TSqC0pp2Rxush2yUVTJ0dJTQ==
+  version "1.0.30001053"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001053.tgz#b7ae027567ce2665b965b0437e4512b296ccd20d"
+  integrity sha512-HtV4wwIZl6GA4Oznse8aR274XUOYGZnQLcf/P8vHgmlfqSNelwD+id8CyHOceqLqt9yfKmo7DUZTh1EuS9pukg==
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -4306,9 +4306,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.378, electron-to-chromium@^1.3.413:
-  version "1.3.429"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.429.tgz#0d1ef6710ba84de3710615280c1f6f79c8205b47"
-  integrity sha512-YW8rXMJx33FalISp0uP0+AkvBx9gfzzQ4NotblGga6Z8ZX00bg2e5FNWV8fyDD/VN3WLhEtjFXNwzdJrdaAHEQ==
+  version "1.3.430"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.430.tgz#33914f7c2db771bdcf30977bd4fd6258ee8a2f37"
+  integrity sha512-HMDYkANGhx6vfbqpOf/hc6hWEmiOipOHGDeRDeUb3HLD3XIWpvKQxFgWf0tgHcr3aNv6I/8VPecplqmQsXoZSw==
 
 elegant-spinner@^2.0.0:
   version "2.0.0"
@@ -9548,9 +9548,9 @@ postcss@^7, postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.16, po
     supports-color "^6.1.0"
 
 postprocessing@^6.13.3:
-  version "6.13.4"
-  resolved "https://registry.yarnpkg.com/postprocessing/-/postprocessing-6.13.4.tgz#16325e17cc00bc6b38fcc7742e381a1497a6f05e"
-  integrity sha512-3cKQ4laltlZtnnWX9PFyIux0s+Mkorfu7A8duqsRYAp8VNOff9b+yUk4C3yht4nO+weSRf1hUOKhJhIi6T6U1Q==
+  version "6.13.5"
+  resolved "https://registry.yarnpkg.com/postprocessing/-/postprocessing-6.13.5.tgz#77f92cd5925b2e5a4951ae81ba5020abb6d331b1"
+  integrity sha512-txeM9PL1p5HgzE6agSLO1cT9TQyhoXn1Ogj9PkEjLNNbqI1Anv2PmUTevPR2CY9o93ET563T1jA8d75Bftw+lw==
 
 prelude-ls@~1.1.2:
   version "1.1.2"
@@ -10063,9 +10063,9 @@ react-three-fiber@^4.1.1:
     utility-types "^3.10.0"
 
 react-transition-group@^4.3.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.0.tgz#59f1e6ec384a11e245fa6f2ade8e104d752ac87c"
-  integrity sha512-c7wuNGJlHItwt6+HS0e9r53ZD5ARJDJSRYBv0APmfQqSCSokdrgJm07IO0ZKwjTVkIQKOlSTO3F06A3JqUSl7Q==
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.1.tgz#63868f9325a38ea5ee9535d828327f85773345c9"
+  integrity sha512-Djqr7OQ2aPUiYurhPalTrVy9ddmFCCzwhqQmtN+J3+3DzLO209Fdr70QrN8Z3DsglWql6iY1lDWAfpFiBtuKGw==
   dependencies:
     "@babel/runtime" "^7.5.5"
     dom-helpers "^5.0.1"
