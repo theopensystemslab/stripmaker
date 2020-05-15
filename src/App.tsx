@@ -67,18 +67,18 @@ function App() {
         pixelRatio={window.devicePixelRatio}
       >
         <ambientLight intensity={0.85} />
-        <pointLight
-          position={[40, 90, 45]}
+        <directionalLight
+          position={[40, 55, 35]}
           castShadow
           intensity={0.1}
-          shadowMapWidth={1024}
-          shadowMapHeight={1024}
-          shadowBias={-0.0004}
+          // shadowMapWidth={1024}
+          // shadowMapHeight={1024}
+          // shadowBias={-0.0004}
         />
         <Building />
         {/* <Ground /> */}
         <mesh name="ground" rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
-          <planeBufferGeometry attach="geometry" args={[30, 30, 1, 1]} />
+          <planeBufferGeometry attach="geometry" args={[50, 50, 1, 1]} />
           <shadowMaterial
             attach="material"
             color={0}

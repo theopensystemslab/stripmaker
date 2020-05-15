@@ -3,12 +3,10 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import Shapes from "./Shapes";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <Shapes />
   </React.StrictMode>,
   document.getElementById("root")
 );
